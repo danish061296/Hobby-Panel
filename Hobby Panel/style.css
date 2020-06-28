@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/Bg.jpg);
+}
+
+.panel-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  color: white;
+  grid-template-areas:
+    "git git battery facebook"
+    "sports coding coding food"
+    "travel travel workout photography";
+  gap: 10px;
+  height: 100vh;
+}
+
+.panel-container > div {
+  height: 250px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pic1 {
+  border-radius: 5px;
+  background: url("./img/pic1.jpg");
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+
+.pic1 h2 {
+  padding: 10px;
+  font-size: 40px;
+}
+.pic1 p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pic2 h2 {
+  padding: 10px;
+  font-size: 40px;
+}
+.pic2 p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pic2 {
+  border-radius: 5px;
+  background: url("./img/pic2.jpg");
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+
+.pic1:hover {
+  opacity: 1;
+}
+.pic2:hover {
+  opacity: 1;
+}
+
+.git a {
+  text-decoration: none;
+  color: white;
+}
+.git {
+  grid-area: git;
+}
+
+.battery {
+  grid-area: battery;
+}
+
+.facebook {
+  grid-area: facebook;
+}
+
+.facebook a {
+  text-decoration: none;
+  color: white;
+}
+.sports {
+  grid-area: sports;
+}
+
+.coding {
+  grid-area: coding;
+}
+
+.food {
+  grid-area: food;
+}
+
+.travel {
+  grid-area: travel;
+}
+
+.workout {
+  grid-area: workout;
+}
+
+.photography {
+  grid-area: photography;
+}
